@@ -27,6 +27,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'rack-cors'
 
 gem 'devise'
+gem 'simple_token_authentication', '~> 1.0'
 
 group :production do
   # Use postgres as the database for production
