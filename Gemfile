@@ -29,6 +29,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
 
+gem 'jbuilder', '~> 2.5'
+
 group :production do
   # Use postgres as the database for production
   gem 'pg'
