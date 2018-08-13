@@ -8,7 +8,7 @@ class MountiansController < ApplicationController
 
       def show
         @mountian = Mountian.find(params[:id])
-        render json: @mountian, only: [:name, :description, :id]
+        render json: @mountian, only: [:id, :name, :description]
       end
 
 end

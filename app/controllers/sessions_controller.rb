@@ -1,11 +1,12 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_authentication!, only: [:create, :destroy]
+
   def create
     @user = User.where(email: params[:email]).first
-
     if @user&.valid_password?(params[:password])
       render :create, status: :created
     else
-      head(:unauthorized)
+      render json: {}, status: :unauthorized
     end
   end
 
