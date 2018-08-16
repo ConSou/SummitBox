@@ -6,7 +6,9 @@ json.data do
       :email,
       :authentication_token,
       :confirmation_token,
-      :confirmed_at
+      :confirmed_at,
+      :first_name,
+      :last_name
     )
   end
 end
