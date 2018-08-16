@@ -31,6 +31,10 @@ gem 'simple_token_authentication', '~> 1.0'
 
 gem 'jbuilder', '~> 2.5'
 
+gem 'mailgun_rails'
+
+ gem 'figaro'
+
 group :production do
   # Use postgres as the database for production
   gem 'pg'
