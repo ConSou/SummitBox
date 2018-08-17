@@ -6,7 +6,8 @@ json.data do
       :email,
       :authentication_token,
       :first_name,
-      :last_name
+      :last_name,
+      :image
     )
   end
 end

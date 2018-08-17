@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   acts_as_token_authenticatable
-  has_one_attached :avatar
+  has_one_attached :image
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
