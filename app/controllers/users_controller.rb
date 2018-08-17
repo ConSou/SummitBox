@@ -7,6 +7,14 @@ class UsersController < ApplicationController
     render :show
   end
 
+  def update
+    @user = User.find(params[:id])
+
+    render :show
+
+
+  end
+
   def create
     @user = User.new(user_params)
 
@@ -20,7 +28,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name)
+    params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :avatar)
   end
 
 

@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   scope '/v1', defaults: { format: :json } do
     resources :mountians
     resource :sessions, only: [:create, :destroy]
-    resources :users, only: [:create, :show]
+    resources :users, only: [:create, :show, :update]
   end
 end
