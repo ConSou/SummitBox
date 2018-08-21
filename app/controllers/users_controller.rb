@@ -9,7 +9,10 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    # @user.assign_attributes(user_params)
+    @user.image.attach(params[:image])
+
+    @user.save!
+
 
     render :show
 
@@ -30,6 +33,7 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :image)
+    # params.fetch(:user, {}).permit(:email, :password, :password_confirmation, :first_name, :last_name, :image)
   end
 
 
