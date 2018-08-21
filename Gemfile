@@ -33,7 +33,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'mailgun_rails'
 
- gem 'figaro'
+gem 'figaro'
+
+gem 'friendly_id'
 
 group :production do
   # Use postgres as the database for production

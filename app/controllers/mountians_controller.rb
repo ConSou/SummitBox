@@ -7,8 +7,14 @@ class MountiansController < ApplicationController
       end
 
       def show
-        @mountian = Mountian.find(params[:id])
-        render json: @mountian, only: [:id, :name, :description]
+        @mountian = Mountian.where(["name LIKE ?", "%#{params[:id]}%"])
+
+        if @mountian.length > 0
+          puts "HELLO"
+          render json: @mountian, only: [:id, :name, :description, :lat, :lng, :elevation]
+        else
+          render json: {}, status: :unauthorized
+        end
       end
 
 end
