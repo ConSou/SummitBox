@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_21_221243) do
+ActiveRecord::Schema.define(version: 2018_08_21_231840) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_221243) do
     t.decimal "lat", precision: 10, scale: 6
     t.decimal "lng", precision: 10, scale: 6
     t.integer "elevation"
+    t.string "image"
     t.index ["slug"], name: "index_mountians_on_slug"
   end
 

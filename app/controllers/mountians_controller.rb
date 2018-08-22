@@ -11,7 +11,7 @@ class MountiansController < ApplicationController
 
         if @mountian.length > 0
           puts "HELLO"
-          render json: @mountian, only: [:id, :name, :description, :lat, :lng, :elevation]
+          render json: @mountian, only: [:id, :name, :description, :lat, :lng, :elevation, :image]
         else
           render json: {}, status: :unauthorized
         end

@@ -4,7 +4,8 @@ Mountian.create(
   description: "Mount Everest, known in Nepali as Sagarmatha and in Tibetan as Chomolungma, is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas.",
   lat: 27.988281,
   lng: 86.924986,
-  elevation: 29029
+  elevation: 29029,
+  image: '../images/everest.jpg'
 )
 
 Mountian.create(
