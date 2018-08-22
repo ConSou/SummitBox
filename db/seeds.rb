@@ -80,9 +80,10 @@ Mountian.create(
   lng: 7.658175,
   elevation: 14692
 )
+mountians = Mountian.all
 
 # Test Users
-User.create(
+this_user = User.create(
   first_name: "Cool",
   last_name: "User",
   email: "the.coolest.test.user@gmail.com",
@@ -90,5 +91,30 @@ User.create(
   password_confirmation: "Password"
 )
 
+that_user = User.create(
+  first_name: "That",
+  last_name: "User",
+  email: "another.cool.test.user@gmail.com",
+  password: "Password",
+  password_confirmation: "Password"
+)
+
+# Plan Seeds
+Plan.create(
+  user: this_user,
+  mountian: mountians.sample
+)
+
+Plan.create(
+  user: this_user,
+  mountian: mountians.sample
+)
+
+Plan.create(
+  user: that_user,
+  mountian: mountians.sample
+)
+
 puts "#{Mountian.count} mountians created!"
+puts "#{Plan.count} plans created"
 puts "Test User Created"
