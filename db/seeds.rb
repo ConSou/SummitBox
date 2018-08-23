@@ -10,7 +10,7 @@ Mountian.create(
 
 Mountian.create(
   name: "Denali",
-  description: "Vinson Massif is a large mountain massif in Antarctica that is 21 km long and 13 km wide and lies within the Sentinel Range of the Ellsworth Mountains.",
+  description: "Denali is the highest mountain peak in North America, with a summit elevation of 20,310 feet above sea level.",
   lat: 63.069370,
   lng: -151.006829,
   elevation: 20310
@@ -18,7 +18,7 @@ Mountian.create(
 
 Mountian.create(
   name: "Vinson Massif",
-  description: "Denali is the highest mountain peak in North America, with a summit elevation of 20,310 feet above sea level.",
+  description: "Vinson Massif is a large mountain massif in Antarctica that is 21 km long and 13 km wide and lies within the Sentinel Range of the Ellsworth Mountains.",
   lat: -78.633819,
   lng: -85.213575,
   elevation: 16050
@@ -79,6 +79,15 @@ Mountian.create(
   lat: 45.980105,
   lng: 7.658175,
   elevation: 14692
+)
+
+#Location Mountian Test
+Mountian.create(
+  name: "Beautiful Emilie Peak",
+  description: "The most beautiful in the land.  Standing at just over 5ft ;)",
+  lat: 43.702949,
+  lng: -116.321007,
+  elevation: 5
 )
 mountians = Mountian.all
 
