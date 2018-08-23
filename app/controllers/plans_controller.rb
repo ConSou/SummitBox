@@ -14,4 +14,11 @@ class PlansController < ApplicationController
 
   end
 
+  def destroy
+    @plan = Plan.find(params[:id])
+
+    @plan.destroy
+    render :create, status: :ok
+  end
+
 end

@@ -1,3 +1,3 @@
 json.data do
-  json.array! @plans, :id, :mountian_id
+  json.array! @plans, :id, :mountian_id, :user_id
 end
