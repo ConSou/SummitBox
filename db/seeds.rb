@@ -92,12 +92,12 @@ Mountian.create(
 
 #Location Mountian Test
 Mountian.create(
-  name: "Beautiful Emilie Peak",
-  description: "The most beautiful in the land.  Standing at just over 5ft ;)",
-  lat: 43.702949,
-  lng: -116.321007,
-  elevation: 5,
-  image: 'emilie.jpg'
+  name: "Mount Conor",
+  description: "The mountain that is me.  With an astounding 6 feet and 1 inch of elevation",
+  lat: 45.595188,
+  lng: -111.043156,
+  elevation: 6,
+  image: 'conor.jpg'
 )
 mountians = Mountian.all
 
