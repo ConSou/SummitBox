@@ -5,7 +5,9 @@ Rails.application.configure do
   		api_key: ENV['MAILGUN_API_KEY'],
   		domain: 'sandbox2694eea1d90647b7b9a80c747f9ca75d.mailgun.org'
   }
-  Rails.application.routes.default_url_options[:host] = "localhost:3000"
+  Rails.application.routes.default_url_options[:host] = "localhost:3001"
+  #config.default_url_options = { :host => "localhost:3001" }
+  #config.action_mailer.default_url_options = { :host => "localhost:3000" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

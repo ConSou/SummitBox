@@ -152,7 +152,11 @@ this_user = User.create(
   last_name: "User",
   email: "the.coolest.test.user@gmail.com",
   password: "Password",
-  password_confirmation: "Password"
+  password_confirmation: "Password",
+  bio: "I'm a pretty cool test user.  Maybe even the coolest depending on who you ask.",
+  city: "Boise",
+  state: "Idaho",
+  country: "USA"
 )
 
 that_user = User.create(
@@ -160,7 +164,11 @@ that_user = User.create(
   last_name: "User",
   email: "another.cool.test.user@gmail.com",
   password: "Password",
-  password_confirmation: "Password"
+  password_confirmation: "Password",
+  bio: "I'm just a test user... Just another one.",
+  city: "Bolder",
+  state: "Colorado",
+  country: "USA"
 )
 
 # Entrys

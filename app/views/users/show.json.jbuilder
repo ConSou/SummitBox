@@ -7,7 +7,11 @@ json.data do
       :authentication_token,
       :first_name,
       :last_name,
-      :image
+      :imgurl,
+      :bio,
+      :city,
+      :state,
+      :country
     )
   end
 end
