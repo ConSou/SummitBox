@@ -1,5 +1,5 @@
 # 7 Summits
-Mountian.create(
+everest = Mountian.create(
   name: "Mount Everest",
   description: "Mount Everest, known in Nepali as Sagarmatha and in Tibetan as Chomolungma, is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas.",
   lat: 27.988281,
@@ -7,8 +7,12 @@ Mountian.create(
   elevation: 29029,
   image: 'everest.jpg'
 )
+Bin.create(
+  name: everest.name,
+  mountian: everest
+)
 
-Mountian.create(
+denali = Mountian.create(
   name: "Denali",
   description: "Denali is the highest mountain peak in North America, with a summit elevation of 20,310 feet above sea level.",
   lat: 63.069370,
@@ -16,8 +20,12 @@ Mountian.create(
   elevation: 20310,
   image: 'denali.jpg'
 )
+Bin.create(
+  name: denali.name,
+  mountian: denali
+)
 
-Mountian.create(
+massif = Mountian.create(
   name: "Vinson Massif",
   description: "Vinson Massif is a large mountain massif in Antarctica that is 21 km long and 13 km wide and lies within the Sentinel Range of the Ellsworth Mountains.",
   lat: -78.633819,
@@ -25,8 +33,12 @@ Mountian.create(
   elevation: 16050,
   image: 'vinson.jpg'
 )
+Bin.create(
+  name: massif.name,
+  mountian: massif
+)
 
-Mountian.create(
+aconcagua = Mountian.create(
   name: "Aconcagua",
   description: "Aconcagua, with a summit elevation of 6,960.8 metres, is the highest mountain in both the Southern and Western Hemispheres.",
   lat: -32.652672,
@@ -34,8 +46,12 @@ Mountian.create(
   elevation: 22841,
   image: 'aconcagua.jpg'
 )
+Bin.create(
+  name: aconcagua.name,
+  mountian: aconcagua
+)
 
-Mountian.create(
+kilimanjaro = Mountian.create(
   name: "Mount Kilimanjaro",
   description: "Mount Kilimanjaro or just Kilimanjaro, with its three volcanic cones, Kibo, Mawenzi, and Shira, is a dormant volcano in Tanzania. It is the highest mountain in Africa, about 4,900 metres from its base, and 5,895 metres above sea level.",
   lat: -3.066825,
@@ -43,8 +59,12 @@ Mountian.create(
   elevation: 19341,
   image: 'kilimanjaro.jpg'
 )
+Bin.create(
+  name: kilimanjaro.name,
+  mountian: kilimanjaro
+)
 
-Mountian.create(
+elbrus = Mountian.create(
   name: "Mount Elbrus",
   description: "Mount Elbrus is the highest mountain in Europe, and the tenth most prominent peak in the world. A dormant volcano, Elbrus is in the Caucasus Mountains in Southern Russia, near the border with Georgia.",
   lat: 43.350436,
@@ -52,8 +72,12 @@ Mountian.create(
   elevation: 18510,
   image: 'elbrus.jpg'
 )
+Bin.create(
+  name: elbrus.name,
+  mountian: elbrus
+)
 
-Mountian.create(
+carstensz = Mountian.create(
   name: "Carstensz Pyramid",
   description: "Puncak Jaya or Carstensz Pyramid is the highest summit of Mount Jayawijaya or Mount Carstensz in the Sudirman Range of the western central highlands of Papua Province, Indonesia. Other summits are East Carstensz Peak, Sumantri and Ngga Pulu.",
   lat: -4.083956,
@@ -61,9 +85,13 @@ Mountian.create(
   elevation: 16024,
   image: 'carstensz.jpg'
 )
+Bin.create(
+  name: carstensz.name,
+  mountian: carstensz
+)
 
 # Notable
-Mountian.create(
+k2 = Mountian.create(
   name: "K2",
   description: "K2, also known as Mount Godwin-Austen or Chhogori, at 8,611 metres above sea level, is the second highest mountain in the world, after Mount Everest at 8,848 metres",
   lat: 35.880473,
@@ -71,8 +99,12 @@ Mountian.create(
   elevation: 28251,
   image: 'k2.jpg'
 )
+Bin.create(
+  name: k2.name,
+  mountian: k2
+)
 
-Mountian.create(
+blanc = Mountian.create(
   name: "Mont Blanc",
   description: "Mont Blanc, meaning White Mountain, is the highest mountain in the Alps and the highest in Europe west of Russia's Caucasus peaks. It rises 4,808.7 m above sea level and is ranked 11th in the world in topographic prominence",
   lat: 45.833070,
@@ -80,8 +112,12 @@ Mountian.create(
   elevation: 15781,
   image: 'blanc.jpg'
 )
+Bin.create(
+  name: blanc.name,
+  mountian: blanc
+)
 
-Mountian.create(
+matterhorn = Mountian.create(
   name: "Matterhorn",
   description: "The Matterhorn is a mountain of the Alps, straddling the main watershed and border between Switzerland and Italy",
   lat: 45.980105,
@@ -89,15 +125,23 @@ Mountian.create(
   elevation: 14692,
   image: 'matterhorn.jpg'
 )
+Bin.create(
+  name: matterhorn.name,
+  mountian: matterhorn
+)
 
 #Location Mountian Test
-Mountian.create(
+conor = Mountian.create(
   name: "Mount Conor",
   description: "The mountain that is me.  With an astounding 6 feet and 1 inch of elevation",
   lat: 45.595188,
   lng: -111.043156,
   elevation: 6,
   image: 'conor.jpg'
+)
+conor_bin = Bin.create(
+  name: conor.name,
+  mountian: conor
 )
 mountians = Mountian.all
 
@@ -118,6 +162,16 @@ that_user = User.create(
   password_confirmation: "Password"
 )
 
+# Entrys
+Entry.create(
+  name: "#{this_user.first_name} #{this_user.last_name}",
+  city: "Bozeman",
+  state: "Montana",
+  country: "USA",
+  journal: "Being up here was the coolest thing ever WOW!",
+  bin: conor_bin,
+)
+
 # Plan Seeds
 Plan.create(
   user: this_user,
@@ -135,5 +189,7 @@ Plan.create(
 )
 
 puts "#{Mountian.count} mountians created!"
-puts "#{Plan.count} plans created"
+puts "#{Bin.count} bins created!"
+puts "#{Entry.count} entrys created!"
+puts "#{Plan.count} plans created!"
 puts "Test User Created"

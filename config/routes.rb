@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :mountians
     resource :sessions, only: [:create, :destroy]
     resources :users, only: [:create, :show, :update]
-    resources :plans
+    resources :plans, only: [:index, :create, :destroy]
+    resources :bins
   end
 end
