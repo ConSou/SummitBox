@@ -144,6 +144,7 @@ conor_bin = Bin.create(
   mountian: conor
 )
 mountians = Mountian.all
+bin = Bin.all
 
 # Test Users
 this_user = User.create(
@@ -163,13 +164,25 @@ that_user = User.create(
 )
 
 # Entrys
+30.times do
+
+Entry.create(
+  name: "Test Name",
+  city: "Test City",
+  state: "Test State",
+  country: "Test Country",
+  journal: "Being up here was the coolest thing ever WOW!",
+  bin: bin.sample
+)
+end
+
 Entry.create(
   name: "#{this_user.first_name} #{this_user.last_name}",
   city: "Bozeman",
   state: "Montana",
   country: "USA",
-  journal: "Being up here was the coolest thing ever WOW!",
-  bin: conor_bin,
+  journal: "Beautiful!",
+  bin: conor_bin
 )
 
 # Plan Seeds
