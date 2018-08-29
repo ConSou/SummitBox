@@ -167,9 +167,10 @@ that_user = User.create(
   password_confirmation: "Password",
   bio: "I'm just a test user... Just another one.",
   city: "Bolder",
-  state: "Colorado",
+  state: "Colorado", 
   country: "USA"
 )
+users = User.all
 
 # Entrys
 30.times do
@@ -180,7 +181,8 @@ Entry.create(
   state: "Test State",
   country: "Test Country",
   journal: "Being up here was the coolest thing ever WOW!",
-  bin: bin.sample
+  bin: bin.sample,
+  user: users.sample
 )
 end
 
@@ -190,7 +192,8 @@ Entry.create(
   state: "Montana",
   country: "USA",
   journal: "Beautiful!",
-  bin: conor_bin
+  bin: conor_bin,
+  user: users.sample
 )
 
 # Plan Seeds
