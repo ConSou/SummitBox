@@ -16,7 +16,8 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.image.attach(params[:image])
+    @user.assign_attributes(user_params)
+    #@user.image.attach(params[:image])
 
     @user.save!
 
