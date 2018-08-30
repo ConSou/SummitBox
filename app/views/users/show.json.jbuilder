@@ -13,5 +13,13 @@ json.data do
       :state,
       :country
     )
+    json.bins @user.bins do |bin|
+      json.call(
+        bin,
+        :id,
+        :name,
+        :mountian_id
+      )
+    end
   end
 end

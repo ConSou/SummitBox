@@ -8,6 +8,7 @@ class MountiansController < ApplicationController
 
       def show
         @mountian = Mountian.where(["name LIKE ?", "%#{params[:id]}%"])
+        #@bin_entries = @mountian[0].bin.entries.count
 
         if @mountian.length > 0
           puts "HELLO"
@@ -16,5 +17,5 @@ class MountiansController < ApplicationController
           render json: {}, status: :unauthorized
         end
       end
-
+      
 end

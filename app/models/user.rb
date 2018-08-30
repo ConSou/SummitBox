@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :plans
   has_many :entries
+  has_many :bins, :through => :entries
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

@@ -167,7 +167,7 @@ that_user = User.create(
   password_confirmation: "Password",
   bio: "I'm just a test user... Just another one.",
   city: "Bolder",
-  state: "Colorado", 
+  state: "Colorado",
   country: "USA"
 )
 users = User.all

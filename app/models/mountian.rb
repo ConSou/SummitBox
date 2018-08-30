@@ -3,5 +3,5 @@ class Mountian < ApplicationRecord
   friendly_id :name, use: :slugged
 
   has_many :plans
-  has_many :bins 
+  has_one :bin
 end

@@ -7,6 +7,8 @@ class UsersController < ApplicationController
 
     render :show
 
+    #render json: @user.to_json({include: :bins})
+
   end
 
   def update
