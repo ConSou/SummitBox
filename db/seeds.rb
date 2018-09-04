@@ -176,7 +176,7 @@ users = User.all
 30.times do
 
 Entry.create(
-  name: "Test Name",
+  name: users.sample.first_name,
   city: "Test City",
   state: "Test State",
   country: "Test Country",
