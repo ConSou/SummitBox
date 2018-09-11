@@ -7,7 +7,7 @@ Rails.application.configure do
   }
   Rails.application.routes.default_url_options[:host] = "localhost:3001"
   #config.default_url_options = { :host => "localhost:3001" }
-  #config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.default_url_options = { :host => "http://a2b6a7c7.ngrok.io" }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

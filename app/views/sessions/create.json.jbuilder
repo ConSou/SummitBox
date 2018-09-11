@@ -6,7 +6,11 @@ json.data do
       :authentication_token,
       :id,
       :first_name,
-      :last_name
+      :last_name,
+      :city,
+      :state,
+      :country,
+      :bio
      )
   end
 end
